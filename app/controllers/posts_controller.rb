@@ -28,4 +28,10 @@ class PostsController < ApplicationController
 
     redirect_to :root
   end
+
+  def show
+    post = Post.find(params["id"])
+    render :show, locals: {post: post}
+
+  end
 end
