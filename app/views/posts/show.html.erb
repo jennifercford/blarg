@@ -1,0 +1,7 @@
+<%=  form_tag(posts_edit_path(post.id), method: :put) do %>
+<!-- :put b/c default will go to post -->
+    <h1 class="blog-post"> <%= post.title %></h1>
+      <div class="post-field">
+        <%= post.content %>
+      </div>
+<% end %>
