@@ -13,4 +13,19 @@ class PostsController < ApplicationController
                            content: params["content"])
     redirect_to :root
   end
+
+  def edit
+    # get that post out of the database
+    post = Post.find(params["id"])
+    render :edit, locals: { post: post }
+
+  end
+
+  def update
+    #binding.pry
+    post = Post.find(params["id"])
+    post.update(title: params["title"], content: params["content"])
+
+    redirect_to :root
+  end
 end
