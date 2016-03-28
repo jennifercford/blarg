@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post "posts", to: "posts#create"
   get "posts/:id/edit", to: "posts#edit", as: "posts_edit"
   put "posts/:id/edit", to: "posts#update"
+  get "posts/:id/show", to: "posts#show", as: "posts_show"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
