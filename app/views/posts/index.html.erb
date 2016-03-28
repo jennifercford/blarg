@@ -5,6 +5,7 @@
 <ul class="posts">
   <% posts.each do |post| %>
     <li class="blog-post">Title: <%= post.title %>
-      <%= link_to("Edit this post!", posts_edit_path(post))%></li>
+      <%= link_to("Edit this post!", posts_edit_path(post))%></br>
+      <%= link_to("Read Me", posts_show_path(post))%></li>
   <% end %>
 </ul>
