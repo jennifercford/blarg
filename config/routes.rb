@@ -12,6 +12,11 @@ Rails.application.routes.draw do
   get "posts/:id/edit", to: "posts#edit", as: "posts_edit"
   put "posts/:id/edit", to: "posts#update"
   get "posts/:id/show", to: "posts#show", as: "posts_show"
+  delete "posts/:id/destroy", to: "posts#destroy", as: "posts_destroy"
+
+  resources :my_resources do
+  get 'page/:page', :action => :index, :on => :collection
+end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

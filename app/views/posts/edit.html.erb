@@ -1,4 +1,5 @@
 <%=  form_tag(posts_edit_path(post.id), method: :put) do %>
+<!--method tells it the action to do , path where sending the data -->
 <!-- :put b/c default will go to post -->
     <div class="post-field">
         <%= label_tag("Title: ") %> <br/>
